@@ -1,20 +1,21 @@
+// Создание класса Student, наследника User и подключение к интерфейсу Comparable<Student>
 public class Student extends User implements Comparable<Student>{
     private long studentID;
-
+// Конструктор класса Student
     public Student(String firstName, String secondName, int age, long studentID) {
         super(firstName, secondName, age);
         this.studentID = studentID;
     }
 
-
+// Метод для вызова ID экземпляра
     public long getStudentID() {
         return studentID;
     }
-
+// Метод, который устанавливает ID экземпляра
     public void setStudentID(long studentID) {
         this.studentID = studentID;
     }
-
+// Метод, который переустанавливает метод вывода в консоль toString()
     @Override
     public String toString() {
         return "Student{" 
@@ -26,7 +27,7 @@ public class Student extends User implements Comparable<Student>{
                 '}';
     }
 
-
+// Метод, который переустанавливает метод сортировки compareTo(Student o) 
     @Override
     public int compareTo(Student o) {
         
